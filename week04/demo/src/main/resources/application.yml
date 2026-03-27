@@ -1,0 +1,18 @@
+team:
+  leader: "HHX"
+  age: 35
+  email: "250505@qq.com"
+  phone: "12345678901"
+  createTime: "2024-06-01"
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: demo
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+
