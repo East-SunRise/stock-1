@@ -1,0 +1,21 @@
+
+server:
+  port: 8088
+  servlet:
+    context-path: /api
+
+spring:
+    application:
+      name: springboot-prod
+
+app:
+  name: Spring Boot Application
+  version: 1.0.0
+  description: Spring Boot
+  envs: ["dev", "test", "prod"]
+  author:
+    name: hhx
+    email: 250490051@qq.com
+    website: https://github.com/hhxsv5
+  tokens: 2000
+  enabled:
