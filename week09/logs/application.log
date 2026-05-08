@@ -1,0 +1,583 @@
+2026-05-08 17:08:29.200 [main] INFO  t.m.w.SpringbootWeek09Application - Starting SpringbootWeek09Application using Java 21.0.5 with PID 20116 (C:\Users\25091\Desktop\week09\week09\target\classes started by 25091 in C:\Users\25091\Desktop\week09\week09)
+2026-05-08 17:08:29.201 [main] DEBUG t.m.w.SpringbootWeek09Application - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-05-08 17:08:29.201 [main] INFO  t.m.w.SpringbootWeek09Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 17:08:29.816 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 17:08:29.823 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 17:08:29.825 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-08 17:08:29.861 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-08 17:08:29.862 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 625 ms
+2026-05-08 17:08:29.889 [main] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 初始化完成
+2026-05-08 17:08:29.889 [main] INFO  top.mqxu.week09.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 17:08:29.889 [main] INFO  top.mqxu.week09.filter.LogFilter - LogFilter 初始化
+2026-05-08 17:08:29.889 [main] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 初始化完成
+2026-05-08 17:08:30.106 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-05-08 17:08:30.111 [main] INFO  t.m.w.SpringbootWeek09Application - Started SpringbootWeek09Application in 1.21 seconds (process running for 1.434)
+2026-05-08 17:08:47.192 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-08 17:08:47.192 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-08 17:08:47.196 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2026-05-08 17:08:47.198 [http-nio-8080-exec-1] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 17:08:47.198, Method: GET, Path: /api/public, IP: 0:0:0:0:0:0:0:1, Query: null
+2026-05-08 17:08:47.199 [http-nio-8080-exec-1] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/public, Token: null
+2026-05-08 17:08:47.199 [http-nio-8080-exec-1] DEBUG top.mqxu.week09.filter.AuthFilter - 公共路径，跳过认证
+2026-05-08 17:08:47.211 [http-nio-8080-exec-1] INFO  t.m.week09.controller.TestController - 执行 TestController.publicApi() 方法 - 公共接口
+2026-05-08 17:08:47.222 [http-nio-8080-exec-1] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 17:08:47.222, Method: GET, Path: /api/public, Duration: 23ms
+2026-05-08 17:10:22.985 [http-nio-8080-exec-3] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 17:10:22.985, Method: GET, Path: /api/public, IP: 0:0:0:0:0:0:0:1, Query: null
+2026-05-08 17:10:22.986 [http-nio-8080-exec-3] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/public, Token: null
+2026-05-08 17:10:22.986 [http-nio-8080-exec-3] DEBUG top.mqxu.week09.filter.AuthFilter - 公共路径，跳过认证
+2026-05-08 17:10:22.986 [http-nio-8080-exec-3] INFO  t.m.week09.controller.TestController - 执行 TestController.publicApi() 方法 - 公共接口
+2026-05-08 17:10:22.988 [http-nio-8080-exec-3] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 17:10:22.988, Method: GET, Path: /api/public, Duration: 2ms
+2026-05-08 17:10:45.414 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 17:10:45.414, Method: GET, Path: /api/test, IP: 0:0:0:0:0:0:0:1, Query: null
+2026-05-08 17:10:45.414 [http-nio-8080-exec-5] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/test, Token: admin-token
+2026-05-08 17:10:45.414 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.AuthFilter - 认证成功 - 用户: admin, 角色: ROLE_ADMIN
+2026-05-08 17:10:45.414 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.AuthFilter - 授权成功 - 用户: admin, 角色: ROLE_ADMIN, 路径: /api/test
+2026-05-08 17:10:45.415 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.TestFilter - 执行 TestFilter 逻辑
+2026-05-08 17:10:45.415 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.CustomFilter - 执行 CustomFilter 逻辑
+2026-05-08 17:10:45.415 [http-nio-8080-exec-5] INFO  t.m.week09.controller.TestController - 执行 TestController.test() 方法
+2026-05-08 17:10:45.416 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 执行完毕，返回响应
+2026-05-08 17:10:45.416 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 执行完毕，返回响应
+2026-05-08 17:10:45.416 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 17:10:45.416, Method: GET, Path: /api/test, Duration: 2ms
+2026-05-08 17:10:51.241 [http-nio-8080-exec-7] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 17:10:51.241, Method: GET, Path: /api/test, IP: 0:0:0:0:0:0:0:1, Query: null
+2026-05-08 17:10:51.241 [http-nio-8080-exec-7] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/test, Token: admin-token
+2026-05-08 17:10:51.241 [http-nio-8080-exec-7] INFO  top.mqxu.week09.filter.AuthFilter - 认证成功 - 用户: admin, 角色: ROLE_ADMIN
+2026-05-08 17:10:51.241 [http-nio-8080-exec-7] INFO  top.mqxu.week09.filter.AuthFilter - 授权成功 - 用户: admin, 角色: ROLE_ADMIN, 路径: /api/test
+2026-05-08 17:10:51.241 [http-nio-8080-exec-7] INFO  top.mqxu.week09.filter.TestFilter - 执行 TestFilter 逻辑
+2026-05-08 17:10:51.241 [http-nio-8080-exec-7] INFO  top.mqxu.week09.filter.CustomFilter - 执行 CustomFilter 逻辑
+2026-05-08 17:10:51.241 [http-nio-8080-exec-7] INFO  t.m.week09.controller.TestController - 执行 TestController.test() 方法
+2026-05-08 17:10:51.241 [http-nio-8080-exec-7] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 执行完毕，返回响应
+2026-05-08 17:10:51.241 [http-nio-8080-exec-7] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 执行完毕，返回响应
+2026-05-08 17:10:51.241 [http-nio-8080-exec-7] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 17:10:51.241, Method: GET, Path: /api/test, Duration: 0ms
+2026-05-08 17:11:13.730 [main] INFO  t.m.w.SpringbootWeek09Application - Starting SpringbootWeek09Application using Java 21.0.5 with PID 12544 (C:\Users\25091\Desktop\week09\week09\target\classes started by 25091 in C:\Users\25091\Desktop\week09\week09)
+2026-05-08 17:11:13.730 [main] DEBUG t.m.w.SpringbootWeek09Application - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-05-08 17:11:13.731 [main] INFO  t.m.w.SpringbootWeek09Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 17:11:14.246 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 17:11:14.251 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 17:11:14.252 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-08 17:11:14.281 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-08 17:11:14.281 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 522 ms
+2026-05-08 17:11:14.307 [main] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 初始化完成
+2026-05-08 17:11:14.307 [main] INFO  top.mqxu.week09.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 17:11:14.307 [main] INFO  top.mqxu.week09.filter.LogFilter - LogFilter 初始化
+2026-05-08 17:11:14.307 [main] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 初始化完成
+2026-05-08 17:11:14.476 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-08 17:11:14.478 [main] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 销毁完成
+2026-05-08 17:11:14.478 [main] INFO  top.mqxu.week09.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 17:11:14.478 [main] INFO  top.mqxu.week09.filter.LogFilter - LogFilter 销毁
+2026-05-08 17:11:14.478 [main] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 销毁完成
+2026-05-08 17:11:14.485 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-08 17:11:14.494 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-05-08 17:12:39.185 [http-nio-8080-exec-9] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 17:12:39.185, Method: GET, Path: /api/test, IP: 127.0.0.1, Query: null
+2026-05-08 17:12:39.185 [http-nio-8080-exec-9] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/test, Token: ok
+2026-05-08 17:12:39.186 [http-nio-8080-exec-9] WARN  top.mqxu.week09.filter.AuthFilter - 无效的认证令牌 - Token: ok
+2026-05-08 17:12:39.186 [http-nio-8080-exec-9] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 17:12:39.186, Method: GET, Path: /api/test, Duration: 1ms
+2026-05-08 17:13:21.460 [main] INFO  t.m.w.SpringbootWeek09Application - Starting SpringbootWeek09Application using Java 21.0.5 with PID 6256 (C:\Users\25091\Desktop\week09\week09\target\classes started by 25091 in C:\Users\25091\Desktop\week09\week09)
+2026-05-08 17:13:21.460 [main] DEBUG t.m.w.SpringbootWeek09Application - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-05-08 17:13:21.462 [main] INFO  t.m.w.SpringbootWeek09Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 17:13:21.992 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 17:13:21.998 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 17:13:21.998 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-08 17:13:22.027 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-08 17:13:22.028 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 536 ms
+2026-05-08 17:13:22.052 [main] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 初始化完成
+2026-05-08 17:13:22.053 [main] INFO  top.mqxu.week09.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 17:13:22.053 [main] INFO  top.mqxu.week09.filter.LogFilter - LogFilter 初始化
+2026-05-08 17:13:22.053 [main] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 初始化完成
+2026-05-08 17:13:22.225 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-08 17:13:22.226 [main] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 销毁完成
+2026-05-08 17:13:22.226 [main] INFO  top.mqxu.week09.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 17:13:22.226 [main] INFO  top.mqxu.week09.filter.LogFilter - LogFilter 销毁
+2026-05-08 17:13:22.226 [main] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 销毁完成
+2026-05-08 17:13:22.233 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-08 17:13:22.242 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-05-08 17:13:29.550 [http-nio-8080-exec-1] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 17:13:29.550, Method: GET, Path: /api/test, IP: 127.0.0.1, Query: null
+2026-05-08 17:13:29.550 [http-nio-8080-exec-1] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/test, Token: ok
+2026-05-08 17:13:29.550 [http-nio-8080-exec-1] WARN  top.mqxu.week09.filter.AuthFilter - 无效的认证令牌 - Token: ok
+2026-05-08 17:13:29.550 [http-nio-8080-exec-1] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 17:13:29.550, Method: GET, Path: /api/test, Duration: 0ms
+2026-05-08 17:14:33.900 [http-nio-8080-exec-3] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 17:14:33.900, Method: GET, Path: /api/test, IP: 127.0.0.1, Query: null
+2026-05-08 17:14:33.901 [http-nio-8080-exec-3] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/test, Token: null
+2026-05-08 17:14:33.901 [http-nio-8080-exec-3] WARN  top.mqxu.week09.filter.AuthFilter - 未提供认证令牌 - Path: /api/test
+2026-05-08 17:14:33.901 [http-nio-8080-exec-3] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 17:14:33.901, Method: GET, Path: /api/test, Duration: 0ms
+2026-05-08 17:15:02.853 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 17:15:02.853, Method: GET, Path: /api/test, IP: 127.0.0.1, Query: null
+2026-05-08 17:15:02.854 [http-nio-8080-exec-5] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/test, Token: admin-token
+2026-05-08 17:15:02.854 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.AuthFilter - 认证成功 - 用户: admin, 角色: ROLE_ADMIN
+2026-05-08 17:15:02.854 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.AuthFilter - 授权成功 - 用户: admin, 角色: ROLE_ADMIN, 路径: /api/test
+2026-05-08 17:15:02.854 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.TestFilter - 执行 TestFilter 逻辑
+2026-05-08 17:15:02.854 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.CustomFilter - 执行 CustomFilter 逻辑
+2026-05-08 17:15:02.855 [http-nio-8080-exec-5] INFO  t.m.week09.controller.TestController - 执行 TestController.test() 方法
+2026-05-08 17:15:02.855 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 执行完毕，返回响应
+2026-05-08 17:15:02.856 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 执行完毕，返回响应
+2026-05-08 17:15:02.856 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 17:15:02.856, Method: GET, Path: /api/test, Duration: 2ms
+2026-05-08 17:18:51.160 [main] INFO  t.m.w.SpringbootWeek09Application - Starting SpringbootWeek09Application using Java 21.0.5 with PID 23960 (C:\Users\25091\Desktop\week09\week09\target\classes started by 25091 in C:\Users\25091\Desktop\week09\week09)
+2026-05-08 17:18:51.161 [main] DEBUG t.m.w.SpringbootWeek09Application - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-05-08 17:18:51.162 [main] INFO  t.m.w.SpringbootWeek09Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 17:18:51.727 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 17:18:51.735 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 17:18:51.735 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-08 17:18:51.771 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-08 17:18:51.771 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 580 ms
+2026-05-08 17:18:51.799 [main] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 初始化完成
+2026-05-08 17:18:51.799 [main] INFO  top.mqxu.week09.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 17:18:51.799 [main] INFO  top.mqxu.week09.filter.LogFilter - LogFilter 初始化
+2026-05-08 17:18:51.800 [main] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 初始化完成
+2026-05-08 17:18:51.991 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-08 17:18:51.993 [main] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 销毁完成
+2026-05-08 17:18:51.993 [main] INFO  top.mqxu.week09.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 17:18:51.993 [main] INFO  top.mqxu.week09.filter.LogFilter - LogFilter 销毁
+2026-05-08 17:18:51.993 [main] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 销毁完成
+2026-05-08 17:18:52.000 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-08 17:18:52.010 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-05-08 17:18:53.812 [http-nio-8080-exec-7] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 17:18:53.812, Method: GET, Path: /api/test, IP: 127.0.0.1, Query: null
+2026-05-08 17:18:53.813 [http-nio-8080-exec-7] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/test, Token: admin-token
+2026-05-08 17:18:53.813 [http-nio-8080-exec-7] INFO  top.mqxu.week09.filter.AuthFilter - 认证成功 - 用户: admin, 角色: ROLE_ADMIN
+2026-05-08 17:18:53.813 [http-nio-8080-exec-7] INFO  top.mqxu.week09.filter.AuthFilter - 授权成功 - 用户: admin, 角色: ROLE_ADMIN, 路径: /api/test
+2026-05-08 17:18:53.813 [http-nio-8080-exec-7] INFO  top.mqxu.week09.filter.TestFilter - 执行 TestFilter 逻辑
+2026-05-08 17:18:53.813 [http-nio-8080-exec-7] INFO  top.mqxu.week09.filter.CustomFilter - 执行 CustomFilter 逻辑
+2026-05-08 17:18:53.813 [http-nio-8080-exec-7] INFO  t.m.week09.controller.TestController - 执行 TestController.test() 方法
+2026-05-08 17:18:53.814 [http-nio-8080-exec-7] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 执行完毕，返回响应
+2026-05-08 17:18:53.814 [http-nio-8080-exec-7] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 执行完毕，返回响应
+2026-05-08 17:18:53.814 [http-nio-8080-exec-7] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 17:18:53.814, Method: GET, Path: /api/test, Duration: 1ms
+2026-05-08 17:19:00.432 [http-nio-8080-exec-9] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 17:19:00.432, Method: GET, Path: /api/test, IP: 127.0.0.1, Query: null
+2026-05-08 17:19:00.432 [http-nio-8080-exec-9] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/test, Token: ok
+2026-05-08 17:19:00.432 [http-nio-8080-exec-9] WARN  top.mqxu.week09.filter.AuthFilter - 无效的认证令牌 - Token: ok
+2026-05-08 17:19:00.432 [http-nio-8080-exec-9] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 17:19:00.432, Method: GET, Path: /api/test, Duration: 0ms
+2026-05-08 17:19:05.075 [http-nio-8080-exec-1] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 17:19:05.075, Method: GET, Path: /api/test, IP: 127.0.0.1, Query: null
+2026-05-08 17:19:05.075 [http-nio-8080-exec-1] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/test, Token: admin-token
+2026-05-08 17:19:05.075 [http-nio-8080-exec-1] INFO  top.mqxu.week09.filter.AuthFilter - 认证成功 - 用户: admin, 角色: ROLE_ADMIN
+2026-05-08 17:19:05.075 [http-nio-8080-exec-1] INFO  top.mqxu.week09.filter.AuthFilter - 授权成功 - 用户: admin, 角色: ROLE_ADMIN, 路径: /api/test
+2026-05-08 17:19:05.075 [http-nio-8080-exec-1] INFO  top.mqxu.week09.filter.TestFilter - 执行 TestFilter 逻辑
+2026-05-08 17:19:05.075 [http-nio-8080-exec-1] INFO  top.mqxu.week09.filter.CustomFilter - 执行 CustomFilter 逻辑
+2026-05-08 17:19:05.075 [http-nio-8080-exec-1] INFO  t.m.week09.controller.TestController - 执行 TestController.test() 方法
+2026-05-08 17:19:05.077 [http-nio-8080-exec-1] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 执行完毕，返回响应
+2026-05-08 17:19:05.077 [http-nio-8080-exec-1] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 执行完毕，返回响应
+2026-05-08 17:19:05.077 [http-nio-8080-exec-1] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 17:19:05.077, Method: GET, Path: /api/test, Duration: 2ms
+2026-05-08 17:59:36.092 [SpringApplicationShutdownHook] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 销毁完成
+2026-05-08 17:59:36.092 [SpringApplicationShutdownHook] INFO  top.mqxu.week09.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 17:59:36.092 [SpringApplicationShutdownHook] INFO  top.mqxu.week09.filter.LogFilter - LogFilter 销毁
+2026-05-08 17:59:36.093 [SpringApplicationShutdownHook] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 销毁完成
+2026-05-08 17:59:51.353 [main] INFO  t.m.w.SpringbootWeek09Application - Starting SpringbootWeek09Application using Java 21.0.5 with PID 7356 (C:\Users\25091\Desktop\week09\week09\target\classes started by 25091 in C:\Users\25091\Desktop\week09\week09)
+2026-05-08 17:59:51.353 [main] DEBUG t.m.w.SpringbootWeek09Application - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-05-08 17:59:51.354 [main] INFO  t.m.w.SpringbootWeek09Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 17:59:51.943 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 17:59:51.950 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 17:59:51.950 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-08 17:59:51.994 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-08 17:59:51.995 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 610 ms
+2026-05-08 17:59:52.023 [main] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 初始化完成
+2026-05-08 17:59:52.023 [main] INFO  top.mqxu.week09.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 17:59:52.023 [main] INFO  top.mqxu.week09.filter.LogFilter - LogFilter 初始化
+2026-05-08 17:59:52.023 [main] INFO  top.mqxu.week09.filter.CORSFilter - CORSFilter 初始化
+2026-05-08 17:59:52.023 [main] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 初始化完成
+2026-05-08 17:59:52.253 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-05-08 17:59:52.258 [main] INFO  t.m.w.SpringbootWeek09Application - Started SpringbootWeek09Application in 1.202 seconds (process running for 1.428)
+2026-05-08 18:49:15.165 [main] INFO  t.m.w.SpringbootWeek09Application - Starting SpringbootWeek09Application using Java 21.0.5 with PID 26700 (C:\Users\25091\Desktop\week09\week09\target\classes started by 25091 in C:\Users\25091\Desktop\week09\week09)
+2026-05-08 18:49:15.168 [main] DEBUG t.m.w.SpringbootWeek09Application - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-05-08 18:49:15.169 [main] INFO  t.m.w.SpringbootWeek09Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 18:49:16.203 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 18:49:16.214 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 18:49:16.214 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-08 18:49:16.268 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-08 18:49:16.268 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1037 ms
+2026-05-08 18:49:16.317 [main] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 初始化完成
+2026-05-08 18:49:16.317 [main] INFO  top.mqxu.week09.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 18:49:16.318 [main] INFO  top.mqxu.week09.filter.LogFilter - LogFilter 初始化
+2026-05-08 18:49:16.318 [main] INFO  top.mqxu.week09.filter.CORSFilter - CORSFilter 初始化
+2026-05-08 18:49:16.319 [main] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 初始化完成
+2026-05-08 18:49:16.631 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-08 18:49:16.635 [main] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 销毁完成
+2026-05-08 18:49:16.635 [main] INFO  top.mqxu.week09.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 18:49:16.635 [main] INFO  top.mqxu.week09.filter.LogFilter - LogFilter 销毁
+2026-05-08 18:49:16.636 [main] INFO  top.mqxu.week09.filter.CORSFilter - CORSFilter 销毁
+2026-05-08 18:49:16.636 [main] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 销毁完成
+2026-05-08 18:49:16.648 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-08 18:49:16.664 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-05-08 18:51:26.341 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-08 18:51:26.344 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-08 18:51:26.365 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 20 ms
+2026-05-08 18:51:26.372 [http-nio-8080-exec-1] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 18:51:26.372, Method: GET, Path: /api/public, IP: 0:0:0:0:0:0:0:1, Query: null
+2026-05-08 18:51:26.375 [http-nio-8080-exec-1] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/public, Token: null
+2026-05-08 18:51:26.375 [http-nio-8080-exec-1] DEBUG top.mqxu.week09.filter.AuthFilter - 公共路径，跳过认证
+2026-05-08 18:51:26.429 [http-nio-8080-exec-1] INFO  t.m.week09.controller.TestController - 执行 TestController.publicApi() 方法 - 公共接口
+2026-05-08 18:51:26.461 [http-nio-8080-exec-1] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 18:51:26.460, Method: GET, Path: /api/public, Duration: 85ms
+2026-05-08 18:51:27.724 [http-nio-8080-exec-2] DEBUG top.mqxu.week09.filter.CORSFilter - CORS预检请求，直接放行
+2026-05-08 18:51:27.728 [http-nio-8080-exec-3] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 18:51:27.728, Method: GET, Path: /api/test, IP: 0:0:0:0:0:0:0:1, Query: null
+2026-05-08 18:51:27.728 [http-nio-8080-exec-3] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/test, Token: admin-token
+2026-05-08 18:51:27.728 [http-nio-8080-exec-3] INFO  top.mqxu.week09.filter.AuthFilter - 认证成功 - 用户: admin, 角色: ROLE_ADMIN
+2026-05-08 18:51:27.728 [http-nio-8080-exec-3] INFO  top.mqxu.week09.filter.AuthFilter - 授权成功 - 用户: admin, 角色: ROLE_ADMIN, 路径: /api/test
+2026-05-08 18:51:27.728 [http-nio-8080-exec-3] INFO  top.mqxu.week09.filter.TestFilter - 执行 TestFilter 逻辑
+2026-05-08 18:51:27.728 [http-nio-8080-exec-3] INFO  top.mqxu.week09.filter.CustomFilter - 执行 CustomFilter 逻辑
+2026-05-08 18:51:27.729 [http-nio-8080-exec-3] INFO  t.m.week09.controller.TestController - 执行 TestController.test() 方法
+2026-05-08 18:51:27.738 [http-nio-8080-exec-3] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 执行完毕，返回响应
+2026-05-08 18:51:27.738 [http-nio-8080-exec-3] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 执行完毕，返回响应
+2026-05-08 18:51:27.738 [http-nio-8080-exec-3] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 18:51:27.738, Method: GET, Path: /api/test, Duration: 10ms
+2026-05-08 18:51:28.613 [http-nio-8080-exec-7] DEBUG top.mqxu.week09.filter.CORSFilter - CORS预检请求，直接放行
+2026-05-08 18:51:28.616 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 18:51:28.616, Method: GET, Path: /api/admin, IP: 0:0:0:0:0:0:0:1, Query: null
+2026-05-08 18:51:28.617 [http-nio-8080-exec-5] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/admin, Token: admin-token
+2026-05-08 18:51:28.617 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.AuthFilter - 认证成功 - 用户: admin, 角色: ROLE_ADMIN
+2026-05-08 18:51:28.617 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.AuthFilter - 授权成功 - 用户: admin, 角色: ROLE_ADMIN, 路径: /api/admin
+2026-05-08 18:51:28.618 [http-nio-8080-exec-5] INFO  t.m.week09.controller.TestController - 执行 TestController.admin() 方法 - 管理员接口
+2026-05-08 18:51:28.619 [http-nio-8080-exec-5] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 18:51:28.619, Method: GET, Path: /api/admin, Duration: 2ms
+2026-05-08 18:52:31.733 [http-nio-8080-exec-4] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 18:52:31.733, Method: GET, Path: /api/test, IP: 0:0:0:0:0:0:0:1, Query: null
+2026-05-08 18:52:31.733 [http-nio-8080-exec-4] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/test, Token: admin-token
+2026-05-08 18:52:31.733 [http-nio-8080-exec-4] INFO  top.mqxu.week09.filter.AuthFilter - 认证成功 - 用户: admin, 角色: ROLE_ADMIN
+2026-05-08 18:52:31.735 [http-nio-8080-exec-4] INFO  top.mqxu.week09.filter.AuthFilter - 授权成功 - 用户: admin, 角色: ROLE_ADMIN, 路径: /api/test
+2026-05-08 18:52:31.735 [http-nio-8080-exec-4] INFO  top.mqxu.week09.filter.TestFilter - 执行 TestFilter 逻辑
+2026-05-08 18:52:31.735 [http-nio-8080-exec-4] INFO  top.mqxu.week09.filter.CustomFilter - 执行 CustomFilter 逻辑
+2026-05-08 18:52:31.735 [http-nio-8080-exec-4] INFO  t.m.week09.controller.TestController - 执行 TestController.test() 方法
+2026-05-08 18:52:31.736 [http-nio-8080-exec-4] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 执行完毕，返回响应
+2026-05-08 18:52:31.736 [http-nio-8080-exec-4] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 执行完毕，返回响应
+2026-05-08 18:52:31.736 [http-nio-8080-exec-4] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 18:52:31.736, Method: GET, Path: /api/test, Duration: 3ms
+2026-05-08 18:52:32.974 [http-nio-8080-exec-8] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 18:52:32.974, Method: GET, Path: /api/public, IP: 0:0:0:0:0:0:0:1, Query: null
+2026-05-08 18:52:32.974 [http-nio-8080-exec-8] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/public, Token: null
+2026-05-08 18:52:32.974 [http-nio-8080-exec-8] DEBUG top.mqxu.week09.filter.AuthFilter - 公共路径，跳过认证
+2026-05-08 18:52:32.975 [http-nio-8080-exec-8] INFO  t.m.week09.controller.TestController - 执行 TestController.publicApi() 方法 - 公共接口
+2026-05-08 18:52:32.976 [http-nio-8080-exec-8] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 18:52:32.976, Method: GET, Path: /api/public, Duration: 2ms
+2026-05-08 18:52:33.911 [http-nio-8080-exec-9] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 18:52:33.911, Method: GET, Path: /api/test, IP: 0:0:0:0:0:0:0:1, Query: null
+2026-05-08 18:52:33.911 [http-nio-8080-exec-9] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/test, Token: admin-token
+2026-05-08 18:52:33.911 [http-nio-8080-exec-9] INFO  top.mqxu.week09.filter.AuthFilter - 认证成功 - 用户: admin, 角色: ROLE_ADMIN
+2026-05-08 18:52:33.911 [http-nio-8080-exec-9] INFO  top.mqxu.week09.filter.AuthFilter - 授权成功 - 用户: admin, 角色: ROLE_ADMIN, 路径: /api/test
+2026-05-08 18:52:33.911 [http-nio-8080-exec-9] INFO  top.mqxu.week09.filter.TestFilter - 执行 TestFilter 逻辑
+2026-05-08 18:52:33.911 [http-nio-8080-exec-9] INFO  top.mqxu.week09.filter.CustomFilter - 执行 CustomFilter 逻辑
+2026-05-08 18:52:33.911 [http-nio-8080-exec-9] INFO  t.m.week09.controller.TestController - 执行 TestController.test() 方法
+2026-05-08 18:52:33.912 [http-nio-8080-exec-9] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 执行完毕，返回响应
+2026-05-08 18:52:33.912 [http-nio-8080-exec-9] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 执行完毕，返回响应
+2026-05-08 18:52:33.912 [http-nio-8080-exec-9] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 18:52:33.912, Method: GET, Path: /api/test, Duration: 1ms
+2026-05-08 18:52:34.608 [http-nio-8080-exec-10] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 18:52:34.608, Method: GET, Path: /api/admin, IP: 0:0:0:0:0:0:0:1, Query: null
+2026-05-08 18:52:34.608 [http-nio-8080-exec-10] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/admin, Token: admin-token
+2026-05-08 18:52:34.608 [http-nio-8080-exec-10] INFO  top.mqxu.week09.filter.AuthFilter - 认证成功 - 用户: admin, 角色: ROLE_ADMIN
+2026-05-08 18:52:34.608 [http-nio-8080-exec-10] INFO  top.mqxu.week09.filter.AuthFilter - 授权成功 - 用户: admin, 角色: ROLE_ADMIN, 路径: /api/admin
+2026-05-08 18:52:34.609 [http-nio-8080-exec-10] INFO  t.m.week09.controller.TestController - 执行 TestController.admin() 方法 - 管理员接口
+2026-05-08 18:52:34.609 [http-nio-8080-exec-10] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 18:52:34.609, Method: GET, Path: /api/admin, Duration: 1ms
+2026-05-08 18:52:45.672 [http-nio-8080-exec-1] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 18:52:45.672, Method: GET, Path: /api/public, IP: 0:0:0:0:0:0:0:1, Query: null
+2026-05-08 18:52:45.672 [http-nio-8080-exec-1] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/public, Token: null
+2026-05-08 18:52:45.672 [http-nio-8080-exec-1] DEBUG top.mqxu.week09.filter.AuthFilter - 公共路径，跳过认证
+2026-05-08 18:52:45.673 [http-nio-8080-exec-1] INFO  t.m.week09.controller.TestController - 执行 TestController.publicApi() 方法 - 公共接口
+2026-05-08 18:52:45.675 [http-nio-8080-exec-1] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 18:52:45.675, Method: GET, Path: /api/public, Duration: 3ms
+2026-05-08 18:52:46.558 [http-nio-8080-exec-2] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 18:52:46.558, Method: GET, Path: /api/test, IP: 0:0:0:0:0:0:0:1, Query: null
+2026-05-08 18:52:46.559 [http-nio-8080-exec-2] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/test, Token: admin-token
+2026-05-08 18:52:46.559 [http-nio-8080-exec-2] INFO  top.mqxu.week09.filter.AuthFilter - 认证成功 - 用户: admin, 角色: ROLE_ADMIN
+2026-05-08 18:52:46.559 [http-nio-8080-exec-2] INFO  top.mqxu.week09.filter.AuthFilter - 授权成功 - 用户: admin, 角色: ROLE_ADMIN, 路径: /api/test
+2026-05-08 18:52:46.559 [http-nio-8080-exec-2] INFO  top.mqxu.week09.filter.TestFilter - 执行 TestFilter 逻辑
+2026-05-08 18:52:46.559 [http-nio-8080-exec-2] INFO  top.mqxu.week09.filter.CustomFilter - 执行 CustomFilter 逻辑
+2026-05-08 18:52:46.559 [http-nio-8080-exec-2] INFO  t.m.week09.controller.TestController - 执行 TestController.test() 方法
+2026-05-08 18:52:46.560 [http-nio-8080-exec-2] INFO  top.mqxu.week09.filter.CustomFilter - CustomFilter 执行完毕，返回响应
+2026-05-08 18:52:46.560 [http-nio-8080-exec-2] INFO  top.mqxu.week09.filter.TestFilter - TestFilter 执行完毕，返回响应
+2026-05-08 18:52:46.560 [http-nio-8080-exec-2] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 18:52:46.560, Method: GET, Path: /api/test, Duration: 1ms
+2026-05-08 18:53:01.857 [http-nio-8080-exec-3] INFO  top.mqxu.week09.filter.LogFilter - 请求到达 - Time: 2026-05-08 18:53:01.856, Method: GET, Path: /api/admin, IP: 0:0:0:0:0:0:0:1, Query: null
+2026-05-08 18:53:01.857 [http-nio-8080-exec-3] DEBUG top.mqxu.week09.filter.AuthFilter - 认证过滤器处理请求 - Path: /api/admin, Token: admin-token
+2026-05-08 18:53:01.859 [http-nio-8080-exec-3] INFO  top.mqxu.week09.filter.AuthFilter - 认证成功 - 用户: admin, 角色: ROLE_ADMIN
+2026-05-08 18:53:01.859 [http-nio-8080-exec-3] INFO  top.mqxu.week09.filter.AuthFilter - 授权成功 - 用户: admin, 角色: ROLE_ADMIN, 路径: /api/admin
+2026-05-08 18:53:01.859 [http-nio-8080-exec-3] INFO  t.m.week09.controller.TestController - 执行 TestController.admin() 方法 - 管理员接口
+2026-05-08 18:53:01.860 [http-nio-8080-exec-3] INFO  top.mqxu.week09.filter.LogFilter - 请求完成 - Time: 2026-05-08 18:53:01.860, Method: GET, Path: /api/admin, Duration: 3ms
+2026-05-08 18:59:21.579 [main] INFO  t.m.w.SpringbootWeek09Application - Starting SpringbootWeek09Application using Java 21.0.5 with PID 19960 (C:\Users\25091\Desktop\week09\week09\target\classes started by 25091 in C:\Users\25091\Desktop\week09\week09)
+2026-05-08 18:59:21.580 [main] DEBUG t.m.w.SpringbootWeek09Application - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-05-08 18:59:21.580 [main] INFO  t.m.w.SpringbootWeek09Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 18:59:22.196 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 18:59:22.204 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 18:59:22.204 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-08 18:59:22.246 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-08 18:59:22.246 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 624 ms
+2026-05-08 18:59:22.513 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-05-08 18:59:22.517 [main] INFO  t.m.w.SpringbootWeek09Application - Started SpringbootWeek09Application in 1.261 seconds (process running for 1.512)
+2026-05-08 18:59:37.505 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-08 18:59:37.506 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-08 18:59:37.508 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-05-08 18:59:37.532 [http-nio-8080-exec-1] INFO  t.m.w.interceptor.LogInterceptor - [日志拦截器] 请求进入 path=/api/test, method=GET, ip=0:0:0:0:0:0:0:1, time=2026-05-08T18:59:37.532563600
+2026-05-08 18:59:37.543 [http-nio-8080-exec-1] INFO  t.m.week09.controller.TestController - 执行 TestController.test() 方法
+2026-05-08 18:59:39.569 [http-nio-8080-exec-1] INFO  t.m.w.interceptor.LogInterceptor - [日志拦截器] 响应结束 path=/api/test, status=200, 耗时=2037 ms, time=2026-05-08T18:59:39.569993800, ex=null
+2026-05-08 19:00:05.971 [main] INFO  t.m.w.SpringbootWeek09Application - Starting SpringbootWeek09Application using Java 21.0.5 with PID 9504 (C:\Users\25091\Desktop\week09\week09\target\classes started by 25091 in C:\Users\25091\Desktop\week09\week09)
+2026-05-08 19:00:05.972 [main] DEBUG t.m.w.SpringbootWeek09Application - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-05-08 19:00:05.972 [main] INFO  t.m.w.SpringbootWeek09Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 19:00:06.575 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 19:00:06.582 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 19:00:06.582 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-08 19:00:06.619 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-08 19:00:06.619 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 618 ms
+2026-05-08 19:00:06.856 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-08 19:00:06.871 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-08 19:00:06.881 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-05-08 19:00:54.537 [main] INFO  t.m.w.SpringbootWeek09Application - Starting SpringbootWeek09Application using Java 21.0.5 with PID 24936 (C:\Users\25091\Desktop\week09\week09\target\classes started by 25091 in C:\Users\25091\Desktop\week09\week09)
+2026-05-08 19:00:54.538 [main] DEBUG t.m.w.SpringbootWeek09Application - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-05-08 19:00:54.538 [main] INFO  t.m.w.SpringbootWeek09Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 19:00:55.087 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 19:00:55.093 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 19:00:55.094 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-08 19:00:55.126 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-08 19:00:55.126 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 560 ms
+2026-05-08 19:00:55.330 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-08 19:00:55.339 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-08 19:00:55.349 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-05-08 19:03:24.365 [http-nio-8080-exec-7] INFO  t.m.week09.controller.TestController - 执行 TestController.publicApi() 方法 - 公共接口
+2026-05-08 19:03:25.148 [http-nio-8080-exec-4] INFO  t.m.w.interceptor.LogInterceptor - [日志拦截器] 请求进入 path=/api/test, method=GET, ip=0:0:0:0:0:0:0:1, time=2026-05-08T19:03:25.148754600
+2026-05-08 19:03:25.150 [http-nio-8080-exec-4] INFO  t.m.week09.controller.TestController - 执行 TestController.test() 方法
+2026-05-08 19:03:25.696 [http-nio-8080-exec-6] INFO  t.m.week09.controller.TestController - 执行 TestController.admin() 方法 - 管理员接口
+2026-05-08 19:03:27.166 [http-nio-8080-exec-4] INFO  t.m.w.interceptor.LogInterceptor - [日志拦截器] 响应结束 path=/api/test, status=200, 耗时=2018 ms, time=2026-05-08T19:03:27.166015300, ex=null
+2026-05-08 19:03:27.235 [http-nio-8080-exec-5] INFO  t.m.w.interceptor.LogInterceptor - [日志拦截器] 请求进入 path=/api/test, method=GET, ip=0:0:0:0:0:0:0:1, time=2026-05-08T19:03:27.235713100
+2026-05-08 19:03:27.235 [http-nio-8080-exec-5] INFO  t.m.week09.controller.TestController - 执行 TestController.test() 方法
+2026-05-08 19:03:28.411 [http-nio-8080-exec-3] INFO  t.m.week09.controller.TestController - 执行 TestController.admin() 方法 - 管理员接口
+2026-05-08 19:03:29.243 [http-nio-8080-exec-5] INFO  t.m.w.interceptor.LogInterceptor - [日志拦截器] 响应结束 path=/api/test, status=200, 耗时=2008 ms, time=2026-05-08T19:03:29.243194100, ex=null
+2026-05-08 19:05:09.257 [main] INFO  t.m.w.SpringbootWeek09Application - Starting SpringbootWeek09Application using Java 21.0.5 with PID 2096 (C:\Users\25091\Desktop\week09\week09\target\classes started by 25091 in C:\Users\25091\Desktop\week09\week09)
+2026-05-08 19:05:09.257 [main] DEBUG t.m.w.SpringbootWeek09Application - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-05-08 19:05:09.257 [main] INFO  t.m.w.SpringbootWeek09Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 19:05:09.793 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 19:05:09.801 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 19:05:09.801 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-08 19:05:09.837 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-08 19:05:09.838 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 547 ms
+2026-05-08 19:05:10.073 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-05-08 19:05:10.074 [main] INFO  t.m.w.SpringbootWeek09Application - Started SpringbootWeek09Application in 1.095 seconds (process running for 1.307)
+2026-05-08 19:05:26.397 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-08 19:05:26.398 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-08 19:05:26.398 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-05-08 19:05:26.410 [http-nio-8080-exec-1] INFO  t.m.w.interceptor.LogInterceptor - [日志拦截器] 请求进入 path=/api/test, method=GET, ip=0:0:0:0:0:0:0:1, time=2026-05-08T19:05:26.410545300
+2026-05-08 19:05:26.415 [http-nio-8080-exec-1] INFO  t.m.week09.controller.TestController - 执行 TestController.test() 方法
+2026-05-08 19:05:28.428 [http-nio-8080-exec-1] INFO  t.m.w.interceptor.LogInterceptor - [日志拦截器] 响应结束 path=/api/test, status=200, 耗时=2018 ms, time=2026-05-08T19:05:28.428117200, ex=null
+2026-05-08 19:05:46.772 [main] INFO  t.m.w.SpringbootWeek09Application - Starting SpringbootWeek09Application using Java 21.0.5 with PID 8208 (C:\Users\25091\Desktop\week09\week09\target\classes started by 25091 in C:\Users\25091\Desktop\week09\week09)
+2026-05-08 19:05:46.773 [main] DEBUG t.m.w.SpringbootWeek09Application - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-05-08 19:05:46.773 [main] INFO  t.m.w.SpringbootWeek09Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 19:05:47.290 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 19:05:47.295 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 19:05:47.297 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-08 19:05:47.324 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-08 19:05:47.324 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 521 ms
+2026-05-08 19:05:47.508 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-08 19:05:47.515 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-08 19:05:47.525 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-05-08 19:09:40.791 [main] INFO  t.m.w.SpringbootWeek09Application - Starting SpringbootWeek09Application using Java 21.0.5 with PID 28772 (C:\Users\25091\Desktop\week09\week09\target\classes started by 25091 in C:\Users\25091\Desktop\week09\week09)
+2026-05-08 19:09:40.792 [main] DEBUG t.m.w.SpringbootWeek09Application - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-05-08 19:09:40.793 [main] INFO  t.m.w.SpringbootWeek09Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 19:09:41.431 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 19:09:41.437 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 19:09:41.438 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-08 19:09:41.472 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-08 19:09:41.473 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 647 ms
+2026-05-08 19:09:41.697 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-08 19:09:41.706 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-08 19:09:41.716 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-05-08 19:12:27.472 [main] INFO  t.m.w.SpringbootWeek09Application - Starting SpringbootWeek09Application using Java 21.0.5 with PID 31172 (C:\Users\25091\Desktop\week09\week09\target\classes started by 25091 in C:\Users\25091\Desktop\week09\week09)
+2026-05-08 19:12:27.489 [main] DEBUG t.m.w.SpringbootWeek09Application - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-05-08 19:12:27.490 [main] INFO  t.m.w.SpringbootWeek09Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 19:12:28.069 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 19:12:28.079 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 19:12:28.080 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-08 19:12:28.119 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-08 19:12:28.119 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 600 ms
+2026-05-08 19:12:28.388 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-05-08 19:12:28.392 [main] INFO  t.m.w.SpringbootWeek09Application - Started SpringbootWeek09Application in 1.232 seconds (process running for 1.46)
+2026-05-08 19:12:41.377 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-08 19:12:41.377 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-08 19:12:41.379 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-05-08 19:12:41.391 [http-nio-8080-exec-1] INFO  t.m.w.interceptor.LogInterceptor - [日志拦截器] 请求进入 path=/api/test, method=GET, ip=0:0:0:0:0:0:0:1, time=2026-05-08T19:12:41.390170500
+2026-05-08 19:12:41.395 [http-nio-8080-exec-1] INFO  t.m.week09.controller.TestController - 执行 TestController.test() 方法
+2026-05-08 19:12:41.408 [http-nio-8080-exec-1] INFO  t.m.w.interceptor.LogInterceptor - [日志拦截器] 响应结束 path=/api/test, status=200, 耗时=18 ms, time=2026-05-08T19:12:41.408008100, ex=null
+2026-05-08 19:12:56.457 [http-nio-8080-exec-3] INFO  t.m.w.interceptor.LogInterceptor - [日志拦截器] 请求进入 path=/api/test, method=GET, ip=0:0:0:0:0:0:0:1, time=2026-05-08T19:12:56.457979600
+2026-05-08 19:12:56.457 [http-nio-8080-exec-3] INFO  t.m.week09.controller.TestController - 执行 TestController.test() 方法
+2026-05-08 19:12:56.458 [http-nio-8080-exec-3] INFO  t.m.w.interceptor.LogInterceptor - [日志拦截器] 响应结束 path=/api/test, status=200, 耗时=1 ms, time=2026-05-08T19:12:56.458993100, ex=null
+2026-05-08 19:13:06.616 [http-nio-8080-exec-5] INFO  t.m.w.interceptor.LogInterceptor - [日志拦截器] 请求进入 path=/api/test, method=GET, ip=0:0:0:0:0:0:0:1, time=2026-05-08T19:13:06.616047500
+2026-05-08 19:13:06.617 [http-nio-8080-exec-5] INFO  t.m.week09.controller.TestController - 执行 TestController.test() 方法
+2026-05-08 19:13:06.617 [http-nio-8080-exec-5] INFO  t.m.w.interceptor.LogInterceptor - [日志拦截器] 响应结束 path=/api/test, status=200, 耗时=1 ms, time=2026-05-08T19:13:06.617551700, ex=null
+2026-05-08 19:15:13.431 [main] INFO  t.m.w.SpringbootWeek09Application - Starting SpringbootWeek09Application using Java 21.0.5 with PID 12024 (C:\Users\25091\Desktop\week09\week09\target\classes started by 25091 in C:\Users\25091\Desktop\week09\week09)
+2026-05-08 19:15:13.433 [main] DEBUG t.m.w.SpringbootWeek09Application - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-05-08 19:15:13.434 [main] INFO  t.m.w.SpringbootWeek09Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 19:15:14.102 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 19:15:14.111 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 19:15:14.111 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-08 19:15:14.150 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-08 19:15:14.151 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 684 ms
+2026-05-08 19:15:14.408 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-08 19:15:14.417 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-08 19:15:14.428 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-05-08 19:16:27.507 [main] INFO  t.m.w.SpringbootWeek09Application - Starting SpringbootWeek09Application using Java 21.0.5 with PID 25476 (C:\Users\25091\Desktop\week09\week09\target\classes started by 25091 in C:\Users\25091\Desktop\week09\week09)
+2026-05-08 19:16:27.509 [main] DEBUG t.m.w.SpringbootWeek09Application - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-05-08 19:16:27.509 [main] INFO  t.m.w.SpringbootWeek09Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 19:16:28.076 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 19:16:28.083 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 19:16:28.083 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-08 19:16:28.123 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-08 19:16:28.123 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 578 ms
+2026-05-08 19:16:28.376 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-05-08 19:16:28.379 [main] INFO  t.m.w.SpringbootWeek09Application - Started SpringbootWeek09Application in 1.168 seconds (process running for 1.386)
+2026-05-08 19:17:03.933 [main] INFO  t.m.w.SpringbootWeek09Application - Starting SpringbootWeek09Application using Java 21.0.5 with PID 17520 (C:\Users\25091\Desktop\week09\week09\target\classes started by 25091 in C:\Users\25091\Desktop\week09\week09)
+2026-05-08 19:17:03.935 [main] DEBUG t.m.w.SpringbootWeek09Application - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-05-08 19:17:03.935 [main] INFO  t.m.w.SpringbootWeek09Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 19:17:04.472 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 19:17:04.478 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 19:17:04.478 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-08 19:17:04.511 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-08 19:17:04.511 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 545 ms
+2026-05-08 19:17:04.717 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-08 19:17:04.725 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-08 19:17:04.735 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-05-08 19:20:16.207 [main] INFO  t.m.w.SpringbootWeek09Application - Starting SpringbootWeek09Application using Java 21.0.5 with PID 29720 (C:\Users\25091\Desktop\week09\week09\target\classes started by 25091 in C:\Users\25091\Desktop\week09\week09)
+2026-05-08 19:20:16.208 [main] DEBUG t.m.w.SpringbootWeek09Application - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-05-08 19:20:16.208 [main] INFO  t.m.w.SpringbootWeek09Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 19:20:16.746 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 19:20:16.753 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 19:20:16.753 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-08 19:20:16.786 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-08 19:20:16.786 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 548 ms
+2026-05-08 19:20:16.991 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-08 19:20:17.000 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-08 19:20:17.009 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
